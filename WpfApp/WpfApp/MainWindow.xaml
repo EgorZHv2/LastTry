@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="False">
+            <Image DockPanel.Dock="Left" Source="/Resources/Images/Design/logo.png"></Image>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Общественная система</TextBlock>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <Button Style="{StaticResource MenuBt}">Мероприятия</Button>
+                <Button Style="{StaticResource MenuBt}">Активности</Button>
+                <Button Style="{StaticResource MenuBt}">Профиль</Button>
+                <Button Style="{StaticResource MenuBt}">Kanban</Button>
+            </StackPanel>
+        </DockPanel>
+        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>
